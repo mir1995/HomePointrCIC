@@ -1,5 +1,33 @@
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 5px;
+	}
+ul#horizontal-list li {
+		display: inline;
+	}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 18px 120px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: black;
+	border: 5px solid black;
+	border-radius: 36px;
+	transform: translateY(10%);
+	margin-right: -5px;
+}
+
 .home-button-logo {
-  width: 60px;
+  float: left;
+	width: 60px;
   height: 60px;
   cursor: pointer;
   top:50%;

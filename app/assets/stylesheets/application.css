@@ -79,3 +79,12 @@ p {
   margin-top: 8px;
   width: 208px;
 }
+
+.video {
+ position: fixed;
+ top: 50%; left: 50%;
+ z-index: -200;
+ min-width: 100%;
+ min-height: 100%;
+ transform: translate(-50%, -50%);
+}

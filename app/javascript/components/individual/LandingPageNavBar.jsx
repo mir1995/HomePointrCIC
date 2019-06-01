@@ -15,11 +15,14 @@ class LandingPageNavBar extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="navbar">
-          <img className="home-button-logo" onClick={this.returnHome} src={logo}/>
-        </div>
-      </div>
+       	 <div className="navbar">
+         		 <img className="home-button-logo" onClick={this.returnHome} src={logo}/>
+				 	   <ul id="horizontal-list">
+								 <li><a href="/">Login/ Sign Up</a></li>                                                                                              
+								 <li><a href="/">About</a></li>                                                                                                                                                      
+								 <li><a href="/">Contact</a></li> 
+						 </ul> 
+       	 </div>
     );
   }
 }
