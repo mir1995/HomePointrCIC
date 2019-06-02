@@ -21,6 +21,7 @@ class LandingPageNavBar extends React.Component {
 								 <li><a href="/">Login/ Sign Up</a></li>                                                                                              
 								 <li><a href="/">About</a></li>                                                                                                                                                      
 								 <li><a href="/">Contact</a></li> 
+								 <li><a href="/">FAQs</a></li>
 						 </ul> 
        	 </div>
     );
