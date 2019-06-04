@@ -13,8 +13,8 @@ Rails.application.routes.draw do
       root to: "users#index"
     end
   get 'home/index'
-  get 'errors/error_404'
-  
+  get 'errors/error_404'  
+	
   get 'applications/new/:id' => 'applications#new'
 
   get '/properties/new' => 'properties#new'

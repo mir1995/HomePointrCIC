@@ -1,0 +1,17 @@
+.container .row > [class^="col"]{
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	background-color: #E5EdF5;
+	border: 1px solid #C9C1D5;
+	color: #5F5F5f;
+}
+
+.container .row {
+	margin-bottom: 1rem;
+}
+
+.card {
+	max-width: 25%;
+	margin: 1 rem 2 rem;
+}
+

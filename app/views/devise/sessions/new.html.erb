@@ -1,5 +1,11 @@
-		<%= video_tag "Untitled.mp4", autoplay: :autoplay, loop: :loop, mute: :mute,:size => "320x240", :controls => true, :class=> "video" %>			
-
+<% if current_page?('/') %>
+		<% @title = "BedPointrCIC" %>
+		<% @properties = [] %> 
+		<% Property.all.each do |property| %>
+			<% @properties << property %>
+		<% end %>
+		<%= react_component("MainArea", {properties: @properties}) %>
+<% else %>
 	 <div class="small-frame">
     <%= image_tag("logo.png", :alt => "logo", :class=>"logo") %>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -40,3 +46,4 @@
       </div>
     <% end %>
   </div>
+<% end %>
