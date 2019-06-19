@@ -12,13 +12,14 @@ module Recommendation
     recommended = Hash.new(0)
     
     user_features =  self.attributes.slice(*TENANT_PROPERTY_FEATURES)
-											              .values
-											              .map{|x| if x then x= 1 else x= 0 end }
-		user_preferred_location = Geolocator.get_coord(self.location)	 
-		properties.each do |property|
+                                    .values
+                                    .map{|x| if x then x= 1 else x= 0 end }
+    user_preferred_location = Geolocator.get_coord(self.location)	 
+    
+    properties.each do |property|
 
 			property_features =  property.attributes.slice(*TENANT_PROPERTY_FEATURES)
-											                        .values
+                                              .values
                                               .map{|x| if x then x=1 else x= 0 end }
 	
 			score = dot_product( u=property_features, v=user_features ) +
