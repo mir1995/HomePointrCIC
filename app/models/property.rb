@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Property < ApplicationRecord
-  
   # locations not set
   belongs_to :landlord
   has_many_attached :images, dependent: :destroy
