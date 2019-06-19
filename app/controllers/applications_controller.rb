@@ -17,7 +17,7 @@ class ApplicationsController < ApplicationController
       alreadyApplied << a.property
     end
     @properties = (@properties - alreadyApplied) | (alreadyApplied - @properties)  
-	@properties = @tenant.recommend_properties(@properties)  
+		@properties = @tenant.recommend_properties(@properties)  
 
     @propertyImages = []
     @properties.each do |p|
