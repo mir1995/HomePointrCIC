@@ -1,19 +1,17 @@
 module Recommendation
-	
-	# tenant_features: utilities and furniture are missing from tenants schema
-	TENANT_PROPERTY_FEATURES = ["mobility_aids",
+  # tenant_features: utilities and furniture are missing from tenants schema
+  TENANT_PROPERTY_FEATURES = ["mobility_aids",
                               "accessible_shower",
                               "car_parking", 
                               "lift_access"]	
 
-	def recommend_properties(properties)
-		
+  def recommend_properties(properties)
     # filter for properties in same location of user interest
     #properties = generate_candidates(properties)	
-	
-		recommended = Hash.new(0)
-
-		user_features =  self.attributes.slice(*TENANT_PROPERTY_FEATURES)
+    
+    recommended = Hash.new(0)
+    
+    user_features =  self.attributes.slice(*TENANT_PROPERTY_FEATURES)
 											              .values
 											              .map{|x| if x then x= 1 else x= 0 end }
 		user_preferred_location = Geolocator.get_coord(self.location)	 
