@@ -16,11 +16,8 @@ class ApplicationsController < ApplicationController
     @tenant.applications.each do |a|
       alreadyApplied << a.property
     end
-    @properties = (@properties - alreadyApplied) | (alreadyApplied - @properties)
-    
-    # Approach x: reordering properties based on price matching score with tenant's min_rent
-	  @properties = @tenant.recommend_properties(@properties)  # Should we call the function here or in /views/applications/new.html.erb?
-  	#####
+    @properties = (@properties - alreadyApplied) | (alreadyApplied - @properties)  
+	@properties = @tenant.recommend_properties(@properties)  
 
     @propertyImages = []
     @properties.each do |p|
